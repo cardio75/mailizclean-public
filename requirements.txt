@@ -1,0 +1,9 @@
+# Pour le traitement des emails
+python-dotenv
+
+# Pour le web scraping et automatisation
+playwright
+beautifulsoup4
+
+# Pour les requêtes HTTP
+requests

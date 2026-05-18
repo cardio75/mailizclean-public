@@ -1,0 +1,32 @@
+{
+  "safe_biology_cleanup": {
+    "label": "Biologies anciennes",
+    "description": "Biologies et messages autres anciens. Par defaut les non lus restent exclus, mais ils peuvent etre inclus depuis le dashboard.",
+    "quota_over": 70,
+    "quota_target_under": 70,
+    "before": "2026-04-15",
+    "types": ["biologie", "autre"],
+    "groups": ["hnet", "autres"],
+    "include_unread": false
+  },
+  "safe_report_cleanup": {
+    "label": "Comptes rendus anciens",
+    "description": "Comptes rendus anciens. Par defaut les non lus restent exclus, mais ils peuvent etre inclus depuis le dashboard.",
+    "quota_over": 70,
+    "quota_target_under": 70,
+    "before": "2026-03-15",
+    "types": ["imagerie", "consultation", "synthese-sejour", "lettre", "compte-rendu"],
+    "groups": ["XDM"],
+    "include_unread": false
+  },
+  "old_read_documents": {
+    "label": "Tous documents anciens",
+    "description": "Documents anciens, tous types connus. Par defaut les non lus restent exclus, mais ils peuvent etre inclus depuis le dashboard.",
+    "quota_over": 70,
+    "quota_target_under": 70,
+    "before": "2026-04-15",
+    "types": ["biologie", "imagerie", "consultation", "synthese-sejour", "lettre", "autre"],
+    "groups": ["hnet", "XDM", "hnet+XDM", "autres"],
+    "include_unread": false
+  }
+}

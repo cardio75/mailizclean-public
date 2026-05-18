@@ -1,0 +1,28 @@
+[project]
+name = "mailizclean"
+version = "0.1.0"
+description = "Utilitaire local pour analyser et nettoyer progressivement une boite Mailiz/Roundcube MSSante."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "MailizClean contributors" }
+]
+dependencies = [
+  "beautifulsoup4",
+  "playwright",
+  "python-dotenv",
+  "requests",
+]
+
+[project.optional-dependencies]
+build = [
+  "pyinstaller",
+]
+
+[project.scripts]
+mailizclean = "mailiz_app:run_app"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"

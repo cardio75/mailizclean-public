@@ -23,13 +23,58 @@ Outil fourni sans garantie. L'utilisateur doit verifier les propositions avant t
 
 ## Pour les utilisateurs
 
-La notice utilisateur est ici :
+Le parcours simple est de telecharger une application prete a lancer depuis la page des releases GitHub :
 
-```text
-docs/USER_GUIDE.md
-```
+[https://github.com/cardio75/mailizclean-public/releases](https://github.com/cardio75/mailizclean-public/releases)
 
-Au premier lancement, MailizClean demande :
+Pour la version `0.1.0`, telecharger uniquement l'installeur adapte :
+
+- Mac : `MailizClean-macOS-0.1.0.dmg`
+- Windows : `MailizClean-Windows-0.1.0.zip`
+
+Ne pas telecharger `Source code.zip` ou `Source code.tar.gz` pour une utilisation normale : ces fichiers sont ajoutes automatiquement par GitHub et servent seulement aux developpeurs.
+
+La notice utilisateur detaillee est ici : `docs/USER_GUIDE.md`.
+
+## Installation Mac
+
+1. Telecharger `MailizClean-macOS-0.1.0.dmg` depuis la release GitHub.
+2. Ouvrir le fichier `.dmg`.
+3. Glisser `MailizClean.app` dans `Applications`.
+4. Lancer `MailizClean.app`.
+
+Si macOS refuse l'ouverture parce que l'application n'est pas signee, faire clic droit sur `MailizClean.app`, puis `Ouvrir`.
+
+## Installation Windows
+
+1. Telecharger `MailizClean-Windows-0.1.0.zip` depuis la release GitHub.
+2. Decompresser le fichier `.zip`.
+3. Ouvrir le dossier `MailizClean`.
+4. Double-cliquer sur `MailizClean.exe`.
+
+Ne pas sortir `MailizClean.exe` de son dossier : il a besoin des fichiers qui sont a cote de lui.
+
+Si Windows affiche un avertissement de securite, c'est attendu pour cette premiere version non signee.
+
+## Connexion Mailiz
+
+MailizClean propose deux facons de se connecter a Mailiz.
+
+### Connexion manuelle
+
+C'est le mode le plus simple pour ne pas confier ses identifiants a l'application.
+
+MailizClean ouvre une fenetre Chromium. L'utilisateur se connecte lui-meme sur le site Mailiz, choisit son mode de reception du code OTP si besoin, saisit son mot de passe et son code OTP, puis attend de voir sa boite de reception Mailiz.
+
+Ensuite, il revient dans MailizClean. Des que MailizClean detecte la boite Mailiz, le scan ou l'action demandee demarre automatiquement.
+
+Dans ce mode, il n'est pas necessaire de saisir le mot de passe Mailiz, le mot de passe de la boite OTP ou les identifiants dans MailizClean.
+
+### Connexion automatique
+
+Ce mode est utile pour un usage repete.
+
+MailizClean utilise les identifiants enregistres localement sur l'ordinateur :
 
 - l'adresse MSSante utilisee sur le site Mailiz ;
 - le mot de passe Mailiz ;
@@ -37,7 +82,9 @@ Au premier lancement, MailizClean demande :
 - le mot de passe ou mot de passe d'application de cette boite email ;
 - le serveur IMAP de cette boite email.
 
-Ces informations sont enregistrees localement sur l'ordinateur. Voir aussi `docs/PRIVACY.md`.
+Ces informations restent sur l'ordinateur. Voir aussi `docs/PRIVACY.md`.
+
+Dans les deux modes, une fenetre Chromium peut s'ouvrir. Apres la connexion manuelle eventuelle, elle peut etre minimisee, mais il ne faut pas cliquer dedans pendant que MailizClean travaille.
 
 ## Parcours normal
 
@@ -55,11 +102,7 @@ Ces informations sont enregistrees localement sur l'ordinateur. Voir aussi `docs
 12. Cliquer sur `Vider la corbeille`.
 13. Attendre le scan de controle.
 
-Le mode manuel ouvre une fenetre Chromium. L'utilisateur s'y connecte jusqu'a voir la boite de reception Mailiz, puis revient dans MailizClean. Des que MailizClean detecte la boite, le scan ou l'action demandee demarre automatiquement. La fenetre peut ensuite etre minimisee, mais il ne faut plus cliquer dedans pendant que MailizClean travaille.
-
-Le mode automatique utilise les identifiants enregistres et ouvre une fenetre Chromium. La fenetre peut etre minimisee, mais il ne faut pas cliquer dedans pendant que MailizClean travaille.
-
-## Installation developpeur
+## Depuis le code source
 
 Sur Windows, ouvrir le dossier `installation`, puis lancer `setup-windows.bat`. Le script affiche des etapes numerotees. L'installation de Chromium peut prendre plusieurs minutes. Ensuite, ouvrir le dossier `lancement`, puis double-cliquer sur `lancer-mailizclean.bat`.
 

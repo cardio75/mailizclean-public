@@ -23,6 +23,7 @@ Sortie :
 
 ```text
 dist/MailizClean.app
+dist/MailizClean-macOS-0.1.0.dmg
 ```
 
 ## Build Windows
@@ -35,7 +36,10 @@ Sortie :
 
 ```text
 dist\MailizClean\MailizClean.exe
+dist\MailizClean-Windows-0.1.0.zip
 ```
+
+Distribuer le `.dmg` sur Mac. Sur Windows, distribuer le `.zip` ou le dossier `dist\MailizClean` complet, pas le `.exe` seul.
 
 ## A faire avant diffusion large
 

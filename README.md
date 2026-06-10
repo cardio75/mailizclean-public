@@ -19,7 +19,7 @@ Outil fourni sans garantie. L'utilisateur doit verifier les propositions avant t
 - Deplacement controle des messages coches vers la corbeille Mailiz.
 - Vidage de la corbeille avec confirmation.
 - Scan de controle apres vidage.
-- Packaging macOS et Windows en preparation avec PyInstaller.
+- Packaging macOS et Windows avec PyInstaller.
 
 ## Pour les utilisateurs
 
@@ -174,13 +174,17 @@ Build macOS :
 ./scripts/build_macos.sh
 ```
 
+Sorties : `dist/MailizClean.app` et `dist/MailizClean-macOS-0.1.0.dmg`.
+
 Build Windows :
 
 ```powershell
 .\scripts\build_windows.ps1
 ```
 
-Les builds doivent etre produits sur l'OS cible. La signature macOS/Windows n'est pas encore configuree.
+Sorties : `dist\MailizClean\MailizClean.exe` et `dist\MailizClean-Windows-0.1.0.zip`.
+
+Les builds doivent etre produits sur l'OS cible. Sur Windows, distribuer le `.zip` ou le dossier `dist\MailizClean`, pas le `.exe` seul. La signature macOS/Windows n'est pas encore configuree.
 
 ## Limites connues
 

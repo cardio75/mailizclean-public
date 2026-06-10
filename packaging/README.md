@@ -12,7 +12,10 @@ Sortie attendue :
 
 ```text
 dist/MailizClean.app
+dist/MailizClean-macOS-0.1.0.dmg
 ```
+
+Le `.dmg` contient `MailizClean.app` et un raccourci vers `Applications`.
 
 ## Windows
 
@@ -26,11 +29,16 @@ Sortie attendue :
 
 ```text
 dist\MailizClean\MailizClean.exe
+dist\MailizClean-Windows-0.1.0.zip
 ```
+
+Pour Windows, distribuer le `.zip` ou le dossier `dist\MailizClean` complet. Ne pas envoyer le `.exe` seul : il a besoin des fichiers voisins, dont Chromium/Playwright.
 
 ## Choix techniques
 
 - Build `onedir`, plus fiable avec Playwright/Chromium que `onefile`.
+- Le `.exe` Windows est dans le dossier `dist\MailizClean`.
+- Le `.dmg` macOS est genere avec `hdiutil`.
 - Donnees utilisateur hors bundle :
   - macOS : `~/Library/Application Support/MailizClean`
   - Windows : `%APPDATA%\MailizClean`
